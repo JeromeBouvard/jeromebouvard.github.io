@@ -40,6 +40,13 @@ a:hover{text-decoration: none; cursor:pointer;}
 	padding-right:0;
 }
 
+
+/* Sizes */
+
+.bloc-xl{
+	padding:150px 50px;
+}
+
 /* = Full Screen Blocs 
 -------------------------------------------------------------- */
 
@@ -54,6 +61,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 	align-self: flex-middle;
 	flex-grow: 1;
 	display: flex;
+	flex-wrap: wrap;
 }
 .bloc-fill-screen > .container > .row{
 	flex-grow: 1;
@@ -199,8 +207,8 @@ button{
 .icon-md{
 	font-size:30px!important;
 }
-.icon-xl{
-	font-size:100px!important;
+.icon-lg{
+	font-size:60px!important;
 }
 .icon-semi-rounded-a{
 	margin:0 auto;
@@ -226,6 +234,25 @@ button{
 	min-width: 162px;
 }
 
+/* Image Frame */
+.img-frame,.img-frame-md,.img-frame-lg,.img-frame-rd,.img-frame-rd-md,.img-frame-rd-lg{
+	background:#FFF;
+	border:1px solid rgba(0,0,0,0.1);
+	box-shadow:0 2px 2px rgba(0,0,0,0.05);
+	padding:4px;
+}
+.img-frame{
+	border-radius:3px;
+}
+.img-frame-md,.img-frame-lg{
+	border-radius:6px;
+}
+.img-frame-md,.img-frame-rd-md{
+	padding:8px;
+}
+.img-frame-lg,.img-frame-rd-lg{
+	padding:14px;
+}
 /*  Rounded Image */
 .img-rd-md{
 	border-radius:20px;
@@ -284,21 +311,26 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .h3-style{
-	font-size:16px;
+	font-size:30px;
 	font-family:Lato;
 	font-weight:300;
+	margin-top:50px;
+	margin-bottom:50px;
 }
 .h1-style{
 	font-family:Lato;
 	font-weight:400;
+	font-size:70px;
 }
 .h2-style{
 	font-family:Lato;
 	font-weight:300;
+	font-size:50px;
+	margin-bottom:50px;
+	margin-top:50px;
 }
 .img-style{
 	width:320px;
-	height:320px;
 	border-radius:161px 161px 161px 161px;
 }
 .p-style{
@@ -306,7 +338,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-weight:300;
 	text-indent:0px;
 	line-height:30px;
-	font-size:20px;
+	font-size:24px;
+	letter-spacing:0px;
 }
 .h2-about-me--style{
 	font-family:Lato;
@@ -316,8 +349,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .p-8-style{
 	font-family:Lato;
 	font-weight:300;
-	font-size:20px;
+	font-size:24px;
 	line-height:30px;
+	letter-spacing:0px;
 }
 .h2-tarifs-style{
 	font-family:Lato;
@@ -440,6 +474,12 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .navbar-nav li a:hover{
 	color:#EAC85C!important;
 }
+.btn-style{
+	font-weight:bold;
+}
+.btn-contact-style{
+	font-weight:bold;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -501,11 +541,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Bloc image backgrounds */
 
-.bg-red-leaves{
-	background-image:url("img/red-leaves.jpg");
-}
 .bg-dots-bg{
 	background-image:url("img/dots-bg.png");
+}
+.bg-field{
+	background-image:url("img/field.jpg");
 }
 
 
@@ -574,8 +614,33 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 @media (max-width: 991px){
 	.img-style{
-		width:320px;
-		height:320px;
+		width:240px;
+	}
+	
+}
+
+@media (max-width: 767px){
+	.img-style{
+		margin-top:100px;
+	}
+	
+}
+
+@media (max-width: 575px){
+	.h1-style{
+		font-size:50px;
+	}
+	.h2-style{
+		font-size:40px;
+		margin-top:20px;
+		margin-right:0px;
+		margin-bottom:20px;
+	}
+	.h3-style{
+		font-size:25px;
+	}
+	.img-style{
+		margin-top:100px;
 	}
 	
 }
