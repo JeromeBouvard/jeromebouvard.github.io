@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>http://stephaniepoulain.com</loc>
-	<lastmod>2021-01-05</lastmod>
+	<lastmod>2021-02-10</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
@@ -19,19 +19,11 @@
 	</image:image>
 	<image:image>
 	<image:loc>http://stephaniepoulain.com/img/AF-LogoPNG_AF-logo.png</image:loc>
-	<image:title>AF LogoPNG_AF-logo</image:title>
+	<image:title>AF%20LogoPNG_AF-logo</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>http://stephaniepoulain.com/img/EB.png</image:loc>
 	<image:title>EB</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>http://stephaniepoulain.com/img/</image:loc>
-	<image:title>Twitter Social Card Image</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>http://stephaniepoulain.com/img/</image:loc>
-	<image:title>Facebook Social Card Image</image:title>
 	</image:image>
 </url>
 </urlset>
