@@ -14,7 +14,7 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 .page-container{overflow: hidden;} /* Prevents unwanted scroll space when scroll FX used. */
-a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
+a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
 a:hover{text-decoration: none; cursor:pointer;}
 
 
@@ -42,6 +42,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 .bloc .container{
 	padding-left:0;
 	padding-right:0;
+	position:relative;
 }
 
 
@@ -92,7 +93,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 	background-size: auto!important;
 }
 .bg-repeat{
-	background:repeat;
+	background-repeat:repeat!important;
 }
 
 
@@ -109,6 +110,32 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 .texture-darken-strong::before{
 	background: rgba(0,0,0,0.8);
+}
+
+
+/* Background Effects */
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:-1;
+}
+.parallax {
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 
@@ -150,25 +177,34 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = NavBar
 -------------------------------------------------------------- */
 
-.hero .hero-nav{
-	padding-left:inherit;
-	padding-right:inherit;
+/* Handle Multi Level Navigation */
+.dropdown-menu .dropdown-menu{
+	border:none}
+@media (min-width:576px){
+	
+.navbar-expand-sm .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-sm .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}}@media (min-width:768px){
+	.navbar-expand-md .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-md .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}}@media (min-width:992px){
+	.navbar-expand-lg .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-lg .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}
 }
-/* Handle Multi Level Navigation */.navbar-light .navbar-nav .nav-link {
-	color: rgb(64, 64, 64);
-}
-.btco-menu li > a {
-	padding: 10px 15px;
-	color: #000;
-}
-.btco-menu .active a:focus,.btco-menu li a:focus ,.navbar > .show > a:focus{
-	background: transparent;
-	outline: 0;
-}
-.dropdown-menu .show > .dropdown-toggle::after{
-	transform: rotate(-90deg);
-}
-
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
@@ -267,19 +303,27 @@ button{
 
 
 
-.card-sq, .card-sq .card-header, .card-sq .card-footer{
-	border-radius:0;
+/* = Masonary
+-------------------------------------------------------------- */
+.card-columns .card {
+	margin-bottom: 0.75rem;
 }
-.card-rd{
-	border-radius:30px;
+@media (min-width: 576px) {
+	.card-columns {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-gap: 1.25rem;
+	-moz-column-gap: 1.25rem;
+	column-gap: 1.25rem;
+	orphans: 1;
+	widows: 1;
 }
-.card-rd .card-header{
-	border-radius:29px 29px 0 0;
+.card-columns .card {
+	display: inline-block;
+	width: 100%;
 }
-.card-rd .card-footer{
-	border-radius:0 0 29px 29px;
 }
-
 
 
 
@@ -473,12 +517,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:Lato;
 	font-weight:300;
 }
-.img-vall-style{
-	height:500px;
-}
-.img-sanfr-style{
-	height:500px;
-}
 .p-contact-style{
 	font-size:20px;
 }
@@ -500,8 +538,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:200px;
 }
 .img-hero-style{
-	width:400px;
-	height:400px;
+	width:75%;
+	height:75%;
 }
 
 /* = Colour
@@ -560,8 +598,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Bloc image backgrounds */
 
-.bg-dots-bg{
-	background-image:url("img/dots-bg.png");
+.bg-crosses-s-bg{
+	background-image:url("img/crosses-s-bg.png");
 }
 .bg-field{
 	background-image:url("img/field.jpg");
